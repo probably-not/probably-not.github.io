@@ -1,0 +1,491 @@
+{
+  "selectedTemplate": 1,
+  "headings": {
+    "projects": "Selected Open Source & Speaking",
+    "work": "Work Experience",
+    "skills": "Technical Skills"
+  },
+  "basics": {
+    "name": "Coby Benveniste",
+    "label": "Staff / Principal Software Engineer - Backend, Platform & Infrastructure",
+    "email": "coby.benveniste@gmail.com",
+    "phone": "+972 58 681 8698",
+    "website": "https://cobybenveniste.com",
+    "summary": "Backend and platform engineer with 12+ years designing and operating high-scale production systems across Go, Elixir, distributed services, cloud infrastructure, and data-intensive architectures. Currently a hands-on VP of Engineering at Marketeam.ai, where I architected and built an agentic AI platform from the ground up; previously Founding Engineer at theGist, Principal Backend Engineer at Arpeely, and Staff Engineer at OpenWeb. Track record includes over 1M RPS low-latency services, event-sourced architecture, cloud infrastructure, reliability, and technical leadership from design through production.",
+    "location": {
+      "address": "Tel Aviv-Yafo, Israel"
+    },
+    "citizenship": "U.S. Citizen",
+    "relocation": "Open to U.S./Europe relocation; remote initially"
+  },
+  "work": [
+    {
+      "company": "Marketeam.ai",
+      "location": "Tel Aviv-Yafo",
+      "startDate": "July 2023",
+      "endDate": "Present",
+      "position": "VP of Engineering",
+      "highlights": [
+        "Architected and built Marketeam.ai's agentic AI platform from the ground up in Elixir/Phoenix, owning backend architecture, cloud infrastructure, deployment, reliability, and core technical direction.",
+        "Designed a fault-tolerant agent harness, runtime and conversation orchestration layer supporting LLM tool execution, provider-agnostic model integration, asynchronous workflows, and real-time client interactions.",
+        "Built production workflow and data infrastructure spanning background jobs, event-driven pipelines, semantic search, AWS, Terraform, CI/CD, and end-to-end observability with OpenTelemetry.",
+        "Designed multi-tenant security around OAuth2 and PostgreSQL Row-Level Security, spearheaded the company's SOC 2 Type II audit, and remained hands-on while leading a cross-functional engineering and product team."
+      ]
+    },
+    {
+      "company": "The Gist",
+      "position": "Founding Engineer",
+      "location": "Tel Aviv-Yafo",
+      "startDate": "December 2021",
+      "endDate": "July 2023",
+      "highlights": [
+        "Prototyped the initial Slack summarization bot in 35 minutes and productionized it into a product installed across thousands of workspaces with roughly 5,000 active users, earning a Slack \"Brilliant Bots\" Staff Pick and Product Hunt Product of the Day.",
+        "Architected event-driven ingestion and data pipelines across Go services, SQS/Kafka, EventBridge, Step Functions, Lambda, S3, and Athena, keeping infrastructure costs extremely low while processing Slack workspace data.",
+        "As the first hire and founding engineer, acted as chief architect through the product's evolution from Slack bot to Electron/Next.js/NestJS workspace, owned AWS/EKS/Terraform/CI/CD infrastructure, and served as the engineering interface to the Head of AI."
+      ]
+    },
+    {
+      "company": "Arpeely",
+      "position": "Principal Backend Engineer",
+      "location": "Tel Aviv-Yafo, Israel",
+      "startDate": "March 2021",
+      "endDate": "December 2021",
+      "highlights": [
+        "Architected and operated latency-sensitive Go services for real-time ad bidding on Google's ad exchange, sustaining over 1M requests per second while targeting sub-10ms latency.",
+        "Replaced expensive managed cloud load balancers with an HAProxy fleet on GCP VMs, using floating-IP/DNS failover and autoscaling to handle multi-gigabyte-per-second traffic and save hundreds of thousands of dollars per month.",
+        "Built the company's cross-cluster SRE and observability platform across GKE using Prometheus, Thanos, Grafana, and centralized alerting, including operational and business telemetry for bidding spend and win rates."
+      ]
+    },
+    {
+      "company": "OpenWeb (Formerly Spot.IM)",
+      "position": "Backend Engineer / Tech Lead / Staff Engineer",
+      "location": "Tel Aviv-Yafo, Israel",
+      "startDate": "July 2018",
+      "endDate": "March 2021",
+      "highlights": [
+        "Progressed from Backend Engineer to Tech Lead to Staff Engineer, leading a small cross-functional squad before moving into a Staff IC role spanning backend architecture, infrastructure, code review, and hands-on development across Ruby, Elixir, and Go.",
+        "Co-designed and migrated major parts of OpenWeb's 2.0 architecture to event-driven Go microservices, using contract-driven BFF APIs to isolate clients from underlying service changes across the conversation admin panel, moderation platform, and core conversation system.",
+        "Led the design and delivery of Moderation 2.0 for a network that reached roughly 50M registered users, combining real-time APIs handling several thousand requests per second with SQS/Kafka processing for tens to hundreds of thousands of messages per day, depending on traffic.",
+        "Built moderation workflows using MySQL, Redis, Google Jigsaw's API, and custom rules for abuse prevention, and led Backend Labs work on fault-tolerance improvements in core message ingestion and Kubernetes performance and cost optimization."
+      ]
+    },
+    {
+      "company": "Signals Analytics",
+      "position": "Software Developer, Data Scientist, Tableau Specialist",
+      "location": "Netanya, Israel",
+      "startDate": "January 2016",
+      "endDate": "April 2018",
+      "highlights": [
+        "Built and maintained an unstructured-text classification system based on analyst-defined rules that became used across company projects, and developed data models for extracting insights from large datasets.",
+        "Became the company's point person for Tableau development, performance, and optimization."
+      ]
+    },
+    {
+      "company": "Jamestown, L.P.",
+      "position": "Software Developer (Freelance)",
+      "location": "Atlanta, GA",
+      "startDate": "September 2015",
+      "endDate": "December 2015",
+      "highlights": [
+        "Developed a system to automate federal tax reporting for a real-estate investment company."
+      ]
+    },
+    {
+      "company": "Leapfrog Services, Inc.",
+      "position": "Software Developer",
+      "location": "Atlanta, GA",
+      "startDate": "June 2014",
+      "endDate": "September 2015",
+      "highlights": [
+        "Developed proprietary internal tools used across multiple departments to automate and streamline day-to-day work."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "keywords": [
+        "Elixir"
+      ],
+      "name": "LiveLoad",
+      "url": "https://github.com/probably-not/live-load",
+      "description": "Open-source load-testing framework for simulating real, distributed, live load on an application."
+    },
+    {
+      "keywords": [
+        "Elixir",
+        "Erlang/OTP",
+        "gen_statem"
+      ],
+      "name": "Declarative AI Flows with gen_statem",
+      "description": "CodeBEAM Europe 2025 talk about building AI agents and declarative workflows with Elixir and OTP.",
+      "url": "https://youtu.be/duEZxrsTUA4"
+    },
+    {
+      "keywords": [
+        "Elixir",
+        "Erlang/OTP",
+        "AMoC",
+        "FLAME"
+      ],
+      "name": "A Murder of LiveViews",
+      "description": "ElixirConf EU 2026 talk about running distributed load tests in Elixir and OTP with AMoC and FLAME.",
+      "url": "https://bit.ly/45rs8n1"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Languages",
+      "keywords": [
+        "Go",
+        "Elixir",
+        "TypeScript",
+        "Python",
+        "SQL",
+        "Ruby"
+      ]
+    },
+    {
+      "name": "Backend & Architecture",
+      "keywords": [
+        "Distributed Services",
+        "Event-Driven Architecture",
+        "Event Sourcing",
+        "Microservices",
+        "Serverless",
+        "API Design",
+        "Contract-First APIs",
+        "Backend-for-Frontend (BFF)",
+        "High-Throughput Systems",
+        "Low-Latency Systems",
+        "Multi-Tenant Applications"
+      ]
+    },
+    {
+      "name": "AI & Agentic Systems",
+      "keywords": [
+        "AI Agents",
+        "Agentic Harness Orchestration",
+        "Agent Sandboxing and Runtime",
+        "Fault-Tolerant LLM Tool Calling",
+        "Semantic Search"
+      ]
+    },
+    {
+      "name": "Elixir / BEAM",
+      "keywords": [
+        "Erlang/OTP",
+        "Phoenix",
+        "LiveView",
+        "gen_statem",
+        "PubSub",
+        "Oban",
+        "Broadway",
+        "AMoC",
+        "FLAME"
+      ]
+    },
+    {
+      "name": "Infrastructure",
+      "keywords": [
+        "AWS",
+        "GCP",
+        "EC2",
+        "Auto Scaling",
+        "GitHub Actions",
+        "Kubernetes",
+        "Docker",
+        "Terraform",
+        "CI/CD"
+      ]
+    },
+    {
+      "name": "Data & Messaging",
+      "keywords": [
+        "PostgreSQL",
+        "pgvector",
+        "ETS",
+        "MySQL",
+        "Redis",
+        "Kafka",
+        "SQS",
+        "Elasticsearch"
+      ]
+    },
+    {
+      "name": "Observability",
+      "keywords": [
+        "OpenTelemetry",
+        "Prometheus",
+        "Grafana",
+        "CloudWatch"
+      ]
+    },
+    {
+      "name": "Security",
+      "keywords": [
+        "OAuth2",
+        "PostgreSQL Row-Level Security",
+        "SOC 2 Type II"
+      ]
+    }
+  ],
+  "sections": [
+    "templates",
+    "profile",
+    "work",
+    "projects",
+    "skills"
+  ],
+  "x-variants": {
+    "elixir": {
+      "basics": {
+        "label": "Staff / Principal Software Engineer - Elixir/OTP, Backend & Platform",
+        "summary": "Backend and platform engineer with 12+ years building production systems and deep Elixir/OTP experience since 2018. Currently a hands-on VP of Engineering at Marketeam.ai, where I architected and built an Elixir/Phoenix LiveView agentic AI platform around OTP state machines and fault-tolerant agent execution; previously Founding Engineer at theGist, Principal Backend Engineer at Arpeely, and Staff Engineer at OpenWeb. Experienced across OTP architecture, distributed services, cloud infrastructure, performance, reliability, and technical leadership; Elixir community speaker at CodeBEAM Europe and ElixirConf EU and creator of LiveLoad."
+      },
+      "headings": {
+        "projects": "Selected Elixir Open Source & Speaking"
+      },
+      "work": {
+        "Marketeam.ai": {
+          "highlights": [
+            "Architected and built Marketeam.ai's agentic AI platform from the ground up in Elixir/Phoenix, owning backend architecture, cloud infrastructure, deployment, reliability, and core technical direction.",
+            "Designed the production agent harness and runtime around Erlang/OTP gen_statem, using delegated state machines and process monitoring for fault-tolerant tool execution, with conversation orchestration and LiveView/PubSub integration.",
+            "Built production workflow and data infrastructure with Oban, Broadway/SQS, Ash's Reactor, PostgreSQL/pgvector, and ETS, alongside AWS, Terraform, CI/CD, and observability with OpenTelemetry.",
+            "Designed multi-tenant security around OAuth2 and PostgreSQL Row-Level Security, spearheaded the company's SOC 2 Type II audit, and remained hands-on while leading a cross-functional engineering and product team."
+          ]
+        }
+      },
+      "skills": [
+        {
+          "name": "Languages",
+          "keywords": [
+            "Elixir",
+            "Go",
+            "TypeScript",
+            "Python",
+            "SQL",
+            "Ruby"
+          ]
+        },
+        {
+          "name": "Backend & Architecture",
+          "keywords": [
+            "Distributed Services",
+            "Event-Driven Architecture",
+            "Event Sourcing",
+            "Microservices",
+            "Serverless",
+            "API Design",
+            "Contract-First APIs",
+            "Backend-for-Frontend (BFF)",
+            "High-Throughput Systems",
+            "Low-Latency Systems",
+            "Multi-Tenant Applications"
+          ]
+        },
+        {
+          "name": "AI & Agentic Systems",
+          "keywords": [
+            "AI Agents",
+            "Agentic Harness Orchestration",
+            "Agent Sandboxing and Runtime",
+            "Fault-Tolerant LLM Tool Calling",
+            "Semantic Search"
+          ]
+        },
+        {
+          "name": "Elixir / BEAM",
+          "keywords": [
+            "Erlang/OTP",
+            "Phoenix",
+            "LiveView",
+            "gen_statem",
+            "PubSub",
+            "Oban",
+            "Broadway",
+            "AMoC",
+            "FLAME"
+          ]
+        },
+        {
+          "name": "Infrastructure",
+          "keywords": [
+            "AWS",
+            "GCP",
+            "EC2",
+            "Auto Scaling",
+            "GitHub Actions",
+            "Kubernetes",
+            "Docker",
+            "Terraform",
+            "CI/CD"
+          ]
+        },
+        {
+          "name": "Data & Messaging",
+          "keywords": [
+            "PostgreSQL",
+            "pgvector",
+            "ETS",
+            "MySQL",
+            "Redis",
+            "Kafka",
+            "SQS",
+            "Elasticsearch"
+          ]
+        },
+        {
+          "name": "Observability",
+          "keywords": [
+            "OpenTelemetry",
+            "Prometheus",
+            "Grafana",
+            "CloudWatch"
+          ]
+        },
+        {
+          "name": "Security",
+          "keywords": [
+            "OAuth2",
+            "PostgreSQL Row-Level Security",
+            "SOC 2 Type II"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "basics": {
+        "label": "VP of Engineering | Head of Engineering | Hands-on Technical Leader",
+        "summary": "Hands-on engineering leader with 12+ years across VP Engineering, founding-engineer, Principal, Staff, and technical leadership roles. Currently own engineering, infrastructure, cloud, and DevOps at Marketeam.ai while co-leading product direction, architecting and building the agentic AI platform, and leading a cross-functional product and engineering team. Previously Founding Engineer at theGist, Principal Backend Engineer at Arpeely, and Staff Engineer at OpenWeb, with a background in high-scale backend services, reliability, and low-latency infrastructure."
+      },
+      "headings": {
+        "work": "Engineering Leadership Experience",
+        "skills": "Leadership & Technical Skills",
+        "projects": "Selected Technical Work & Speaking"
+      },
+      "work": {
+        "Marketeam.ai": {
+          "highlights": [
+            "Own engineering, infrastructure, cloud, DevOps, and core technical direction at Marketeam.ai while co-leading product design and direction for an agentic AI platform.",
+            "Hired and built a cross-functional team of four engineers, a product manager, a product designer, and two data scientists, leading technical direction, mentorship, and engineering execution while remaining hands-on.",
+            "Architected and built the platform from the ground up, including the production agent harness and runtime, asynchronous workflow and data infrastructure, AWS deployment architecture, and observability with OpenTelemetry.",
+            "Designed multi-tenant security around OAuth2 and PostgreSQL Row-Level Security and spearheaded the company's successful SOC 2 Type II audit."
+          ]
+        },
+        "The Gist": {
+          "highlights": [
+            "Joined as the first hire and founding engineer, acting as chief architect for a five-engineer team and serving as the engineering interface to the Head of AI while setting technical direction.",
+            "Took the initial Slack summarization bot from a 35-minute prototype to a production product installed across thousands of workspaces with roughly 5,000 active users, earning a Slack \"Brilliant Bots\" Staff Pick and Product Hunt Product of the Day.",
+            "Owned architecture and infrastructure across the product's evolution, spanning Go event-driven services, low-cost AWS serverless data pipelines, the Electron/Next.js/NestJS workspace, EKS, Terraform, CI/CD, observability, and autoscaling."
+          ]
+        },
+        "OpenWeb (Formerly Spot.IM)": {
+          "highlights": [
+            "Progressed from Backend Engineer to Tech Lead to Staff Engineer, leading a cross-functional squad of backend and frontend engineers with a product manager before moving into a Staff IC role.",
+            "Co-designed and led migrations into OpenWeb's event-driven 2.0 architecture, including the conversation admin panel, moderation platform, and core conversation components across Go, Kafka, SQS, MySQL, and Redis.",
+            "Led delivery of Moderation 2.0 for a network that reached roughly 50M registered users, supporting several thousand real-time moderation requests per second, while also driving cross-cutting reliability and Kubernetes performance/cost improvements."
+          ]
+        },
+        "Arpeely": {
+          "highlights": [
+            "Owned major architecture and infrastructure decisions for a real-time ad-bidding platform sustaining over 1M requests per second, setting tooling direction and reviewing engineering work across the team.",
+            "Re-architected ingress by replacing managed cloud load balancers with an HAProxy fleet on GCP VMs, handling multi-gigabyte-per-second traffic while saving hundreds of thousands of dollars per month.",
+            "Established cross-cluster SRE and observability across GKE with Prometheus, Thanos, Grafana, and centralized alerting, including visibility into bidding spend and win rates."
+          ]
+        }
+      },
+      "skills": [
+        {
+          "name": "Leadership",
+          "keywords": [
+            "Engineering Strategy",
+            "Hiring",
+            "Team Building",
+            "Mentorship"
+          ]
+        },
+        {
+          "name": "Org & Product",
+          "keywords": [
+            "Technical Direction",
+            "Cross-functional Leadership",
+            "Product Collaboration"
+          ]
+        },
+        {
+          "name": "Backend & Architecture",
+          "keywords": [
+            "Distributed Services",
+            "Event-Driven Architecture",
+            "Event Sourcing",
+            "Microservices",
+            "API Design",
+            "Contract-First APIs",
+            "Backend-for-Frontend (BFF)",
+            "High-Throughput Systems",
+            "Low-Latency Systems",
+            "Multi-Tenant Applications"
+          ]
+        },
+        {
+          "name": "AI & Agentic Systems",
+          "keywords": [
+            "AI Agents",
+            "Agentic Harness Orchestration",
+            "Agent Sandboxing and Runtime",
+            "Fault-Tolerant LLM Tool Calling",
+            "Semantic Search"
+          ]
+        },
+        {
+          "name": "Languages",
+          "keywords": [
+            "Go",
+            "Elixir",
+            "TypeScript",
+            "Python",
+            "SQL",
+            "Ruby"
+          ]
+        },
+        {
+          "name": "Infrastructure",
+          "keywords": [
+            "AWS",
+            "GCP",
+            "EC2",
+            "Auto Scaling",
+            "GitHub Actions",
+            "Kubernetes",
+            "Docker",
+            "Terraform",
+            "CI/CD"
+          ]
+        },
+        {
+          "name": "Data & Observability",
+          "keywords": [
+            "PostgreSQL",
+            "pgvector",
+            "Redis",
+            "Kafka",
+            "SQS",
+            "Elasticsearch",
+            "OpenTelemetry",
+            "Prometheus",
+            "Grafana",
+            "CloudWatch"
+          ]
+        },
+        {
+          "name": "Security",
+          "keywords": [
+            "OAuth2",
+            "PostgreSQL Row-Level Security",
+            "SOC 2 Type II"
+          ]
+        }
+      ]
+    }
+  }
+}

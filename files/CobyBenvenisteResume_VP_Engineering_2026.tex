@@ -1,0 +1,164 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage{needspace}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+    \usepackage[left=0.8in,right=0.8in,bottom=0.8in,top=0.8in]{geometry}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\vspace*{-40pt}
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Coby Benveniste}}\\
+	{\large \textbf{VP of Engineering | Head of Engineering | Hands-on Technical Leader}}\\
+	{\small Tel Aviv-Yafo, Israel $\cdot$ U.S. Citizen $\cdot$ Open to U.S./Europe relocation; remote initially $\cdot$ coby.benveniste@gmail.com $\cdot$ +972 58 681 8698 $\cdot$ https://cobybenveniste.com}\\
+\end{center}
+
+\header{Profile}
+Hands-on engineering leader with 12+ years across VP Engineering, founding-engineer, Principal, Staff, and technical leadership roles. Currently own engineering, infrastructure, cloud, and DevOps at Marketeam.ai while co-leading product direction, architecting and building the agentic AI platform, and leading a cross-functional product and engineering team. Previously Founding Engineer at theGist, Principal Backend Engineer at Arpeely, and Staff Engineer at OpenWeb, with a background in high-scale backend services, reliability, and low-latency infrastructure.\\
+\vspace{1mm}
+
+\header{Engineering Leadership Experience}
+\vspace{1mm}
+
+\needspace{6\baselineskip}
+\textbf{Marketeam.ai} \hfill Tel Aviv-Yafo\\
+\textit{VP of Engineering} \hfill July 2023 - Present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Own engineering, infrastructure, cloud, DevOps, and core technical direction at Marketeam.ai while co-leading product design and direction for an agentic AI platform.
+	\item Hired and built a cross-functional team of four engineers, a product manager, a product designer, and two data scientists, leading technical direction, mentorship, and engineering execution while remaining hands-on.
+	\item Architected and built the platform from the ground up, including the production agent harness and runtime, asynchronous workflow and data infrastructure, AWS deployment architecture, and observability with OpenTelemetry.
+	\item Designed multi-tenant security around OAuth2 and PostgreSQL Row-Level Security and spearheaded the company's successful SOC 2 Type II audit.
+\end{itemize}
+\needspace{6\baselineskip}
+\textbf{The Gist} \hfill Tel Aviv-Yafo\\
+\textit{Founding Engineer} \hfill December 2021 - July 2023\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Joined as the first hire and founding engineer, acting as chief architect for a five-engineer team and serving as the engineering interface to the Head of AI while setting technical direction.
+	\item Took the initial Slack summarization bot from a 35-minute prototype to a production product installed across thousands of workspaces with roughly 5,000 active users, earning a Slack "Brilliant Bots" Staff Pick and Product Hunt Product of the Day.
+	\item Owned architecture and infrastructure across the product's evolution, spanning Go event-driven services, low-cost AWS serverless data pipelines, the Electron/Next.js/NestJS workspace, EKS, Terraform, CI/CD, observability, and autoscaling.
+\end{itemize}
+\needspace{6\baselineskip}
+\textbf{Arpeely} \hfill Tel Aviv-Yafo, Israel\\
+\textit{Principal Backend Engineer} \hfill March 2021 - December 2021\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Owned major architecture and infrastructure decisions for a real-time ad-bidding platform sustaining over 1M requests per second, setting tooling direction and reviewing engineering work across the team.
+	\item Re-architected ingress by replacing managed cloud load balancers with an HAProxy fleet on GCP VMs, handling multi-gigabyte-per-second traffic while saving hundreds of thousands of dollars per month.
+	\item Established cross-cluster SRE and observability across GKE with Prometheus, Thanos, Grafana, and centralized alerting, including visibility into bidding spend and win rates.
+\end{itemize}
+\needspace{6\baselineskip}
+\textbf{OpenWeb (Formerly Spot.IM)} \hfill Tel Aviv-Yafo, Israel\\
+\textit{Backend Engineer / Tech Lead / Staff Engineer} \hfill July 2018 - March 2021\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Progressed from Backend Engineer to Tech Lead to Staff Engineer, leading a cross-functional squad of backend and frontend engineers with a product manager before moving into a Staff IC role.
+	\item Co-designed and led migrations into OpenWeb's event-driven 2.0 architecture, including the conversation admin panel, moderation platform, and core conversation components across Go, Kafka, SQS, MySQL, and Redis.
+	\item Led delivery of Moderation 2.0 for a network that reached roughly 50M registered users, supporting several thousand real-time moderation requests per second, while also driving cross-cutting reliability and Kubernetes performance/cost improvements.
+\end{itemize}
+\needspace{6\baselineskip}
+\textbf{Signals Analytics} \hfill Netanya, Israel\\
+\textit{Software Developer, Data Scientist, Tableau Specialist} \hfill January 2016 - April 2018\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Built and maintained an unstructured-text classification system based on analyst-defined rules that became used across company projects, and developed data models for extracting insights from large datasets.
+	\item Became the company's point person for Tableau development, performance, and optimization.
+\end{itemize}
+\needspace{6\baselineskip}
+\textbf{Jamestown, L.P.} \hfill Atlanta, GA\\
+\textit{Software Developer (Freelance)} \hfill September 2015 - December 2015\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Developed a system to automate federal tax reporting for a real-estate investment company.
+\end{itemize}
+\needspace{6\baselineskip}
+\textbf{Leapfrog Services, Inc.} \hfill Atlanta, GA\\
+\textit{Software Developer} \hfill June 2014 - September 2015\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Developed proprietary internal tools used across multiple departments to automate and streamline day-to-day work.
+\end{itemize}
+
+\header{Leadership \& Technical Skills}
+\begingroup
+\setlength{\parindent}{0pt}
+\noindent\parbox[t]{0.23\textwidth}{\raggedright Leadership:}\hfill\parbox[t]{0.75\textwidth}{\raggedright Engineering Strategy, Hiring, Team Building, Mentorship\par}\par
+\vspace{0.35mm}
+\noindent\parbox[t]{0.23\textwidth}{\raggedright Org \& Product:}\hfill\parbox[t]{0.75\textwidth}{\raggedright Technical Direction, Cross-functional Leadership, Product Collaboration\par}\par
+\vspace{0.35mm}
+\noindent\parbox[t]{0.23\textwidth}{\raggedright Backend \& Architecture:}\hfill\parbox[t]{0.75\textwidth}{\raggedright Distributed Services, Event-Driven Architecture, Event Sourcing, Microservices, API Design, Contract-First APIs, Backend-for-Frontend (BFF), High-Throughput Systems, Low-Latency Systems, Multi-Tenant Applications\par}\par
+\vspace{0.35mm}
+\noindent\parbox[t]{0.23\textwidth}{\raggedright AI \& Agentic Systems:}\hfill\parbox[t]{0.75\textwidth}{\raggedright AI Agents, Agentic Harness Orchestration, Agent Sandboxing and Runtime, Fault-Tolerant LLM Tool Calling, Semantic Search\par}\par
+\vspace{0.35mm}
+\noindent\parbox[t]{0.23\textwidth}{\raggedright Languages:}\hfill\parbox[t]{0.75\textwidth}{\raggedright Go, Elixir, TypeScript, Python, SQL, Ruby\par}\par
+\vspace{0.35mm}
+\noindent\parbox[t]{0.23\textwidth}{\raggedright Infrastructure:}\hfill\parbox[t]{0.75\textwidth}{\raggedright AWS, GCP, EC2, Auto Scaling, GitHub Actions, Kubernetes, Docker, Terraform, CI/CD\par}\par
+\vspace{0.35mm}
+\noindent\parbox[t]{0.23\textwidth}{\raggedright Data \& Observability:}\hfill\parbox[t]{0.75\textwidth}{\raggedright PostgreSQL, pgvector, Redis, Kafka, SQS, Elasticsearch, OpenTelemetry, Prometheus, Grafana, CloudWatch\par}\par
+\vspace{0.35mm}
+\noindent\parbox[t]{0.23\textwidth}{\raggedright Security:}\hfill\parbox[t]{0.75\textwidth}{\raggedright OAuth2, PostgreSQL Row-Level Security, SOC 2 Type II\par}\par
+\endgroup
+\vspace{2mm}
+
+\header{Selected Technical Work \& Speaking}
+{\textbf{LiveLoad}} {\sl Elixir} \hfill https://github.com/probably-not/live-load\\
+Open-source load-testing framework for simulating real, distributed, live load on an application.\\
+\vspace*{2mm}
+{\textbf{Declarative AI Flows with gen\_statem}} {\sl Elixir, Erlang/OTP, gen\_statem} \hfill https://youtu.be/duEZxrsTUA4\\
+CodeBEAM Europe 2025 talk about building AI agents and declarative workflows with Elixir and OTP.\\
+\vspace*{2mm}
+{\textbf{A Murder of LiveViews}} {\sl Elixir, Erlang/OTP, AMoC, FLAME} \hfill https://bit.ly/45rs8n1\\
+ElixirConf EU 2026 talk about running distributed load tests in Elixir and OTP with AMoC and FLAME.\\
+\vspace{1mm}
+
+\end{document}

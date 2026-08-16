@@ -1,0 +1,165 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage{needspace}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+    \usepackage[left=0.8in,right=0.8in,bottom=0.8in,top=0.8in]{geometry}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\vspace*{-40pt}
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Coby Benveniste}}\\
+	{\large \textbf{Staff / Principal Software Engineer - Elixir/OTP, Backend \& Platform}}\\
+	{\small Tel Aviv-Yafo, Israel $\cdot$ U.S. Citizen $\cdot$ Open to U.S./Europe relocation; remote initially $\cdot$ coby.benveniste@gmail.com $\cdot$ +972 58 681 8698 $\cdot$ https://cobybenveniste.com}\\
+\end{center}
+
+\header{Profile}
+Backend and platform engineer with 12+ years building production systems and deep Elixir/OTP experience since 2018. Currently a hands-on VP of Engineering at Marketeam.ai, where I architected and built an Elixir/Phoenix LiveView agentic AI platform around OTP state machines and fault-tolerant agent execution; previously Founding Engineer at theGist, Principal Backend Engineer at Arpeely, and Staff Engineer at OpenWeb. Experienced across OTP architecture, distributed services, cloud infrastructure, performance, reliability, and technical leadership; Elixir community speaker at CodeBEAM Europe and ElixirConf EU and creator of LiveLoad.\\
+\vspace{1mm}
+
+\header{Work Experience}
+\vspace{1mm}
+
+\needspace{6\baselineskip}
+\textbf{Marketeam.ai} \hfill Tel Aviv-Yafo\\
+\textit{VP of Engineering} \hfill July 2023 - Present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Architected and built Marketeam.ai's agentic AI platform from the ground up in Elixir/Phoenix, owning backend architecture, cloud infrastructure, deployment, reliability, and core technical direction.
+	\item Designed the production agent harness and runtime around Erlang/OTP gen\_statem, using delegated state machines and process monitoring for fault-tolerant tool execution, with conversation orchestration and LiveView/PubSub integration.
+	\item Built production workflow and data infrastructure with Oban, Broadway/SQS, Ash's Reactor, PostgreSQL/pgvector, and ETS, alongside AWS, Terraform, CI/CD, and observability with OpenTelemetry.
+	\item Designed multi-tenant security around OAuth2 and PostgreSQL Row-Level Security, spearheaded the company's SOC 2 Type II audit, and remained hands-on while leading a cross-functional engineering and product team.
+\end{itemize}
+\needspace{6\baselineskip}
+\textbf{The Gist} \hfill Tel Aviv-Yafo\\
+\textit{Founding Engineer} \hfill December 2021 - July 2023\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Prototyped the initial Slack summarization bot in 35 minutes and productionized it into a product installed across thousands of workspaces with roughly 5,000 active users, earning a Slack "Brilliant Bots" Staff Pick and Product Hunt Product of the Day.
+	\item Architected event-driven ingestion and data pipelines across Go services, SQS/Kafka, EventBridge, Step Functions, Lambda, S3, and Athena, keeping infrastructure costs extremely low while processing Slack workspace data.
+	\item As the first hire and founding engineer, acted as chief architect through the product's evolution from Slack bot to Electron/Next.js/NestJS workspace, owned AWS/EKS/Terraform/CI/CD infrastructure, and served as the engineering interface to the Head of AI.
+\end{itemize}
+\needspace{6\baselineskip}
+\textbf{Arpeely} \hfill Tel Aviv-Yafo, Israel\\
+\textit{Principal Backend Engineer} \hfill March 2021 - December 2021\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Architected and operated latency-sensitive Go services for real-time ad bidding on Google's ad exchange, sustaining over 1M requests per second while targeting sub-10ms latency.
+	\item Replaced expensive managed cloud load balancers with an HAProxy fleet on GCP VMs, using floating-IP/DNS failover and autoscaling to handle multi-gigabyte-per-second traffic and save hundreds of thousands of dollars per month.
+	\item Built the company's cross-cluster SRE and observability platform across GKE using Prometheus, Thanos, Grafana, and centralized alerting, including operational and business telemetry for bidding spend and win rates.
+\end{itemize}
+\needspace{6\baselineskip}
+\textbf{OpenWeb (Formerly Spot.IM)} \hfill Tel Aviv-Yafo, Israel\\
+\textit{Backend Engineer / Tech Lead / Staff Engineer} \hfill July 2018 - March 2021\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Progressed from Backend Engineer to Tech Lead to Staff Engineer, leading a small cross-functional squad before moving into a Staff IC role spanning backend architecture, infrastructure, code review, and hands-on development across Ruby, Elixir, and Go.
+	\item Co-designed and migrated major parts of OpenWeb's 2.0 architecture to event-driven Go microservices, using contract-driven BFF APIs to isolate clients from underlying service changes across the conversation admin panel, moderation platform, and core conversation system.
+	\item Led the design and delivery of Moderation 2.0 for a network that reached roughly 50M registered users, combining real-time APIs handling several thousand requests per second with SQS/Kafka processing for tens to hundreds of thousands of messages per day, depending on traffic.
+	\item Built moderation workflows using MySQL, Redis, Google Jigsaw's API, and custom rules for abuse prevention, and led Backend Labs work on fault-tolerance improvements in core message ingestion and Kubernetes performance and cost optimization.
+\end{itemize}
+\needspace{6\baselineskip}
+\textbf{Signals Analytics} \hfill Netanya, Israel\\
+\textit{Software Developer, Data Scientist, Tableau Specialist} \hfill January 2016 - April 2018\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Built and maintained an unstructured-text classification system based on analyst-defined rules that became used across company projects, and developed data models for extracting insights from large datasets.
+	\item Became the company's point person for Tableau development, performance, and optimization.
+\end{itemize}
+\needspace{6\baselineskip}
+\textbf{Jamestown, L.P.} \hfill Atlanta, GA\\
+\textit{Software Developer (Freelance)} \hfill September 2015 - December 2015\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Developed a system to automate federal tax reporting for a real-estate investment company.
+\end{itemize}
+\needspace{6\baselineskip}
+\textbf{Leapfrog Services, Inc.} \hfill Atlanta, GA\\
+\textit{Software Developer} \hfill June 2014 - September 2015\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Developed proprietary internal tools used across multiple departments to automate and streamline day-to-day work.
+\end{itemize}
+
+\header{Selected Elixir Open Source \& Speaking}
+{\textbf{LiveLoad}} {\sl Elixir} \hfill https://github.com/probably-not/live-load\\
+Open-source load-testing framework for simulating real, distributed, live load on an application.\\
+\vspace*{2mm}
+{\textbf{Declarative AI Flows with gen\_statem}} {\sl Elixir, Erlang/OTP, gen\_statem} \hfill https://youtu.be/duEZxrsTUA4\\
+CodeBEAM Europe 2025 talk about building AI agents and declarative workflows with Elixir and OTP.\\
+\vspace*{2mm}
+{\textbf{A Murder of LiveViews}} {\sl Elixir, Erlang/OTP, AMoC, FLAME} \hfill https://bit.ly/45rs8n1\\
+ElixirConf EU 2026 talk about running distributed load tests in Elixir and OTP with AMoC and FLAME.\\
+\vspace{1mm}
+
+\header{Technical Skills}
+\begingroup
+\setlength{\parindent}{0pt}
+\noindent\parbox[t]{0.23\textwidth}{\raggedright Languages:}\hfill\parbox[t]{0.75\textwidth}{\raggedright Elixir, Go, TypeScript, Python, SQL, Ruby\par}\par
+\vspace{0.35mm}
+\noindent\parbox[t]{0.23\textwidth}{\raggedright Backend \& Architecture:}\hfill\parbox[t]{0.75\textwidth}{\raggedright Distributed Services, Event-Driven Architecture, Event Sourcing, Microservices, Serverless, API Design, Contract-First APIs, Backend-for-Frontend (BFF), High-Throughput Systems, Low-Latency Systems, Multi-Tenant Applications\par}\par
+\vspace{0.35mm}
+\noindent\parbox[t]{0.23\textwidth}{\raggedright AI \& Agentic Systems:}\hfill\parbox[t]{0.75\textwidth}{\raggedright AI Agents, Agentic Harness Orchestration, Agent Sandboxing and Runtime, Fault-Tolerant LLM Tool Calling, Semantic Search\par}\par
+\vspace{0.35mm}
+\noindent\parbox[t]{0.23\textwidth}{\raggedright Elixir / BEAM:}\hfill\parbox[t]{0.75\textwidth}{\raggedright Erlang/OTP, Phoenix, LiveView, gen\_statem, PubSub, Oban, Broadway, AMoC, FLAME\par}\par
+\vspace{0.35mm}
+\noindent\parbox[t]{0.23\textwidth}{\raggedright Infrastructure:}\hfill\parbox[t]{0.75\textwidth}{\raggedright AWS, GCP, EC2, Auto Scaling, GitHub Actions, Kubernetes, Docker, Terraform, CI/CD\par}\par
+\vspace{0.35mm}
+\noindent\parbox[t]{0.23\textwidth}{\raggedright Data \& Messaging:}\hfill\parbox[t]{0.75\textwidth}{\raggedright PostgreSQL, pgvector, ETS, MySQL, Redis, Kafka, SQS, Elasticsearch\par}\par
+\vspace{0.35mm}
+\noindent\parbox[t]{0.23\textwidth}{\raggedright Observability:}\hfill\parbox[t]{0.75\textwidth}{\raggedright OpenTelemetry, Prometheus, Grafana, CloudWatch\par}\par
+\vspace{0.35mm}
+\noindent\parbox[t]{0.23\textwidth}{\raggedright Security:}\hfill\parbox[t]{0.75\textwidth}{\raggedright OAuth2, PostgreSQL Row-Level Security, SOC 2 Type II\par}\par
+\endgroup
+\vspace{2mm}
+
+\end{document}
