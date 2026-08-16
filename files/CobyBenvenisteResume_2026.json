@@ -10,13 +10,24 @@
     "label": "Staff / Principal Software Engineer - Backend, Platform & Infrastructure",
     "email": "coby.benveniste@gmail.com",
     "phone": "+972 58 681 8698",
-    "website": "https://cobybenveniste.com",
     "summary": "Backend and platform engineer with 12+ years designing and operating high-scale production systems across Go, Elixir, distributed services, cloud infrastructure, and data-intensive architectures. Currently a hands-on VP of Engineering at Marketeam.ai, where I architected and built an agentic AI platform from the ground up; previously Founding Engineer at theGist, Principal Backend Engineer at Arpeely, and Staff Engineer at OpenWeb. Track record includes over 1M RPS low-latency services, event-sourced architecture, cloud infrastructure, reliability, and technical leadership from design through production.",
     "location": {
       "address": "Tel Aviv-Yafo, Israel"
     },
     "citizenship": "U.S. Citizen",
-    "relocation": "Open to U.S./Europe relocation; remote initially"
+    "relocation": "Open to U.S./Europe relocation",
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "probably-not",
+        "url": "https://github.com/probably-not"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "coby-benveniste",
+        "url": "https://linkedin.com/in/coby-benveniste"
+      }
+    ]
   },
   "work": [
     {
@@ -64,7 +75,7 @@
       "endDate": "March 2021",
       "highlights": [
         "Progressed from Backend Engineer to Tech Lead to Staff Engineer, leading a small cross-functional squad before moving into a Staff IC role spanning backend architecture, infrastructure, code review, and hands-on development across Ruby, Elixir, and Go.",
-        "Co-designed and migrated major parts of OpenWeb's 2.0 architecture to event-driven Go microservices, using contract-driven BFF APIs to isolate clients from underlying service changes across the conversation admin panel, moderation platform, and core conversation system.",
+        "Co-designed and migrated major parts of OpenWeb's 2.0 architecture to event-driven Go microservices, using contract-first BFF APIs to isolate clients from underlying service changes across the conversation admin panel, moderation platform, and core conversation system.",
         "Led the design and delivery of Moderation 2.0 for a network that reached roughly 50M registered users, combining real-time APIs handling several thousand requests per second with SQS/Kafka processing for tens to hundreds of thousands of messages per day, depending on traffic.",
         "Built moderation workflows using MySQL, Redis, Google Jigsaw's API, and custom rules for abuse prevention, and led Backend Labs work on fault-tolerance improvements in core message ingestion and Kubernetes performance and cost optimization."
       ]
